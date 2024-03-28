@@ -2,7 +2,7 @@
  * @Author: xx1czj 306205161@qq.com
  * @Date: 2024-03-26 13:57:17
  * @LastEditors: xx1czj 306205161@qq.com
- * @LastEditTime: 2024-03-28 00:35:28
+ * @LastEditTime: 2024-03-28 11:35:19
  * @FilePath: /ReviewNotes/vite-vue3-review/src/main.ts
  * @Description: 
  */
@@ -10,7 +10,11 @@ import { createApp } from 'vue'
 import { createRouter, createWebHistory } from 'vue-router'
 import { createPinia } from 'pinia'
 import App from './App.vue'
-import routes from '~pages'
+import generatedRoutes from '~pages'
+import { setupLayouts } from 'virtual:generated-layouts';//将route里面的路由变成嵌套路由
+ 
+const routes = setupLayouts(generatedRoutes);
+
 import './style.css'
 
 const router = createRouter({

@@ -2,7 +2,7 @@
  * @Author: xx1czj 306205161@qq.com
  * @Date: 2024-03-26 13:57:17
  * @LastEditors: xx1czj 306205161@qq.com
- * @LastEditTime: 2024-03-28 10:02:01
+ * @LastEditTime: 2024-03-28 11:31:08
  * @FilePath: /ReviewNotes/vite-vue3-review/vite.config.ts
  * @Description: vite 配置
  */
@@ -33,7 +33,8 @@ export default defineConfig(({ command, mode, isSsrBuild, isPreview }) => {
         exclude: ['**/components/*.vue'],
       }),
       Layouts({
-        layoutsDirs: 'src/layouts'
+        layoutsDirs: 'src/layouts',
+        defaultLayout: 'index'
       }),
       VueSetupExtend(),
       VueDevTools(),

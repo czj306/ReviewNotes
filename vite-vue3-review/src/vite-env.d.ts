@@ -4,6 +4,7 @@ declare module 'vite-plugin-vue-setup-extend';
 declare module 'virtual:*';
 declare module 'vite-plugin-vue-devtools';
 declare module 'plugins';
+declare module '*.ts';
 declare module '*.vue' {
   import type { ComponentOptions } from 'vue'
   const Component: ComponentOptions

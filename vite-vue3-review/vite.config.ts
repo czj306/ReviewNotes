@@ -2,7 +2,7 @@
  * @Author: xx1czj 306205161@qq.com
  * @Date: 2024-03-26 13:57:17
  * @LastEditors: xx1czj 306205161@qq.com
- * @LastEditTime: 2024-03-28 00:28:14
+ * @LastEditTime: 2024-03-28 10:02:01
  * @FilePath: /ReviewNotes/vite-vue3-review/vite.config.ts
  * @Description: vite 配置
  */
@@ -11,10 +11,10 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import VueSetupExtend from 'vite-plugin-vue-setup-extend'
 import VueDevTools from 'vite-plugin-vue-devtools'
-import Pages from 'vite-plugin-pages';
-import Layouts from 'vite-plugin-vue-layouts';
-import { createMyVitePlugin } from './plugins/index.ts'; // 导入插件
-import removeConsole from "vite-plugin-remove-console";
+import Pages from 'vite-plugin-pages'
+import Layouts from 'vite-plugin-vue-layouts'
+import { createMyVitePlugin } from './plugins/index.ts' // 导入插件
+import removeConsole from "vite-plugin-remove-console"
 // import Inspect from 'vite-plugin-inspect';
 
 // https://vitejs.dev/config/

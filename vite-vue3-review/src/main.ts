@@ -2,7 +2,7 @@
  * @Author: xx1czj 306205161@qq.com
  * @Date: 2024-03-26 13:57:17
  * @LastEditors: xx1czj 306205161@qq.com
- * @LastEditTime: 2024-03-28 11:35:19
+ * @LastEditTime: 2024-03-28 12:15:39
  * @FilePath: /ReviewNotes/vite-vue3-review/src/main.ts
  * @Description: 
  */
@@ -12,7 +12,14 @@ import { createPinia } from 'pinia'
 import App from './App.vue'
 import generatedRoutes from '~pages'
 import { setupLayouts } from 'virtual:generated-layouts';//将route里面的路由变成嵌套路由
- 
+import Worker from 'utils/worker.ts?worker'
+
+const worker = new Worker()
+worker.onmessage = (e) => {
+    console.log('main.js', e.data)
+}
+worker.postMessage('hello from main')
+
 const routes = setupLayouts(generatedRoutes);
 
 import './style.css'

@@ -2,7 +2,7 @@
  * @Author: xx1czj 306205161@qq.com
  * @Date: 2024-03-26 13:57:17
  * @LastEditors: xx1czj 306205161@qq.com
- * @LastEditTime: 2024-03-28 11:31:08
+ * @LastEditTime: 2024-03-28 12:16:19
  * @FilePath: /ReviewNotes/vite-vue3-review/vite.config.ts
  * @Description: vite 配置
  */
@@ -42,9 +42,21 @@ export default defineConfig(({ command, mode, isSsrBuild, isPreview }) => {
       removeConsole(),
       // Inspect(),
     ],
+    optimizeDeps: {
+      include: ['axios']
+    },
     // vite 配置
     server: {
       port: 3030,
+      proxy: {
+        // 指定代理所有/api请求
+        '/api': {
+          // 代理请求之后的请求地址
+          target: 'https://·········',
+          // 跨域
+          changeOrigin: true
+        }
+      }
     },
     preview: {
       port: 8080,
@@ -59,6 +71,7 @@ export default defineConfig(({ command, mode, isSsrBuild, isPreview }) => {
         'features': fileURLToPath(new URL('./src/features', import.meta.url)),
         'components': fileURLToPath(new URL('./src/components', import.meta.url)),
         'router': fileURLToPath(new URL('./src/router', import.meta.url)),
+        'utils': fileURLToPath(new URL('./src/utils', import.meta.url)),
       }
     },
     esbuild: {

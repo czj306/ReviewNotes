@@ -2,7 +2,7 @@
  * @Author: xx1czj 306205161@qq.com
  * @Date: 2024-03-27 15:39:51
  * @LastEditors: xx1czj 306205161@qq.com
- * @LastEditTime: 2024-03-31 15:05:13
+ * @LastEditTime: 2024-03-31 15:09:09
  * @FilePath: /ReviewNotes/vite-vue3-review/plugins/index.ts
  * @Description: 手写自定义插件
  */
@@ -13,7 +13,7 @@ const include = ['components']
 export function createMyVitePlugin(): Plugin {
   return {
     name: 'vite:doc', // 插件名，用于调试和错误报告
-    apply: 'serve', // 指定应用时机，'serve' 表示只在开发服务器中应用
+    apply: 'build', // 指定应用时机，'serve' 表示只在开发服务器中应用
     enforce: 'pre',
     load(id) {
       

@@ -2,7 +2,7 @@
  * @Author: xx1czj 306205161@qq.com
  * @Date: 2024-03-26 14:10:09
  * @LastEditors: xx1czj 306205161@qq.com
- * @LastEditTime: 2024-03-28 11:56:55
+ * @LastEditTime: 2024-04-01 11:36:08
  * @FilePath: /ReviewNotes/vite-vue3-review/src/service/config.ts
  * @Description: service 基础配置中心
  */
@@ -66,6 +66,6 @@ const callApi = (method = "GET", url: string, data = {}) => {
 
 // 请求头部 get | put | delete | post
 //封装GET请求函数
-export const getA = (url: any, data: any) => callApi("GET", url, data);
-// export const getA = (url: any) => callApi("GET", url);
+// export const getA = (url: any, data: any) => callApi("GET", url, data);
+export const getA = (url: any) => callApi("GET", url);
 export const postA = (url: any, data: any) => callApi("POST", url, data);

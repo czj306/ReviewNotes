@@ -2,8 +2,8 @@
  * @Author: xx1czj 306205161@qq.com
  * @Date: 2024-04-02 10:26:27
  * @LastEditors: xx1czj 306205161@qq.com
- * @LastEditTime: 2024-04-02 10:27:47
- * @FilePath: /ReviewNotes/vite-vue3-review/src/service/errorCode.ts
+ * @LastEditTime: 2024-04-02 13:31:33
+ * @FilePath: /ReviewNotes/vite-vue3-review/src/services/errorCode.ts
  * @Description: 网络错误码提示
  */
 /**

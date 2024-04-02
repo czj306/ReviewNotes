@@ -2,13 +2,13 @@
  * @Author: xx1czj 306205161@qq.com
  * @Date: 2024-03-26 14:10:09
  * @LastEditors: xx1czj 306205161@qq.com
- * @LastEditTime: 2024-04-02 11:57:40
- * @FilePath: /ReviewNotes/vite-vue3-review/src/service/config.ts
- * @Description: service 基础配置中心
+ * @LastEditTime: 2024-04-02 13:32:13
+ * @FilePath: /ReviewNotes/vite-vue3-review/src/services/config.ts
+ * @Description: services 基础配置中心
  */
 import axios, { AxiosError, AxiosResponse, AxiosInstance } from 'axios'
-import Cache from './cache2'
-import { httpErrorStatusHandle } from './errorCode.ts'
+import Cache from './cache2.ts'
+import { httpErrorStatusHandle } from './code.ts'
 import qs from "qs";
 import { pendingMap, setPendingMap, getRequestKey } from './cancel.ts'
 
@@ -95,12 +95,13 @@ cache.use({
   })
 
 //封装请求的api
-const callApi = (method = "GET", url: string, data = {
+export const callApi = (method = "GET", url: string, data = {
 	cache: false
 }) => {
   return service({
     method,
     url,
+	...data,
     params: method === "GET" ? data : {},
     data: method === "POST" ? data : {},
 	transformRequest: [

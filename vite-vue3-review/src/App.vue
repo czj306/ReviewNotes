@@ -2,12 +2,14 @@
  * @Author: xx1czj 306205161@qq.com
  * @Date: 2024-03-26 13:57:17
  * @LastEditors: xx1czj 306205161@qq.com
- * @LastEditTime: 2024-04-02 10:51:35
+ * @LastEditTime: 2024-04-02 13:37:49
  * @FilePath: /ReviewNotes/vite-vue3-review/src/App.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
 <script setup lang="ts">
 import HelloWorld from './components/HelloWorld.vue'
+
+
 </script>
 
 <template>

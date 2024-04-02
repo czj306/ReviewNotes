@@ -2,12 +2,12 @@
  * @Author: xx1czj 306205161@qq.com
  * @Date: 2024-04-01 16:10:05
  * @LastEditors: xx1czj 306205161@qq.com
- * @LastEditTime: 2024-04-02 11:57:51
- * @FilePath: /ReviewNotes/vite-vue3-review/src/service/cancel.ts
+ * @LastEditTime: 2024-04-02 14:08:51
+ * @FilePath: /ReviewNotes/vite-vue3-review/src/services/cancel.ts
  * @Description: axios之cancelToken取消请求
  */
 import { AxiosRequestConfig } from "axios";
-// import qs from "qs";
+import qs from "qs";
 
 // 用于装载状态处于请求中的axios请求
 export let pendingMap = new Map();

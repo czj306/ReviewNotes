@@ -2,7 +2,7 @@
  * @Author: xx1czj 306205161@qq.com
  * @Date: 2024-03-26 13:57:17
  * @LastEditors: xx1czj 306205161@qq.com
- * @LastEditTime: 2024-04-02 11:42:21
+ * @LastEditTime: 2024-04-02 14:04:46
  * @FilePath: /ReviewNotes/vite-vue3-review/vite.config.ts
  * @Description: vite 配置
  */
@@ -107,6 +107,9 @@ export default defineConfig(({ command, mode, isSsrBuild, isPreview }) => {
     preview: {
       port: 8080,
     },
+    build: {
+      sourcemap: true,
+    },
     resolve: {
       alias: {
         // 必须添加这一行，否则无法使用
@@ -118,7 +121,7 @@ export default defineConfig(({ command, mode, isSsrBuild, isPreview }) => {
         'components': fileURLToPath(new URL('./src/components', import.meta.url)),
         'router': fileURLToPath(new URL('./src/router', import.meta.url)),
         'utils': fileURLToPath(new URL('./src/utils', import.meta.url)),
-        'service': fileURLToPath(new URL('./src/service', import.meta.url)),
+        'services': fileURLToPath(new URL('./src/services', import.meta.url)),
       }
     },
     esbuild: {

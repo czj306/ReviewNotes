@@ -2,7 +2,7 @@
  * @Author: xx1czj 306205161@qq.com
  * @Date: 2024-03-25 15:14:11
  * @LastEditors: xx1czj 306205161@qq.com
- * @LastEditTime: 2024-03-28 10:02:07
+ * @LastEditTime: 2024-04-02 13:33:02
  * @FilePath: /ReviewNotes/README.md
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -29,7 +29,7 @@ export default defineConfig({
 })
 ```
 ## axios
-## service
+## services
 ## store
 - 采取Pinia
   - 插件（由于有了底层 API 的支持，Pinia store 现在完全支持扩展。）

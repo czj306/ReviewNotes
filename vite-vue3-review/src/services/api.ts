@@ -2,8 +2,8 @@
  * @Author: xx1czj 306205161@qq.com
  * @Date: 2024-03-26 14:13:12
  * @LastEditors: xx1czj 306205161@qq.com
- * @LastEditTime: 2024-04-02 10:35:18
- * @FilePath: /ReviewNotes/vite-vue3-review/src/service/api.ts
+ * @LastEditTime: 2024-04-02 13:32:53
+ * @FilePath: /ReviewNotes/vite-vue3-review/src/services/api.ts
  * @Description: api 基础数据中心
  */
 

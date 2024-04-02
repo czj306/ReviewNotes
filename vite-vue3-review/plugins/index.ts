@@ -2,7 +2,7 @@
  * @Author: xx1czj 306205161@qq.com
  * @Date: 2024-03-27 15:39:51
  * @LastEditors: xx1czj 306205161@qq.com
- * @LastEditTime: 2024-04-01 12:51:38
+ * @LastEditTime: 2024-04-01 15:02:53
  * @FilePath: /ReviewNotes/vite-vue3-review/plugins/index.ts
  * @Description: 手写自定义插件
  */
@@ -13,7 +13,7 @@ const include = ['components']
 export function createMyVitePlugin(): Plugin {
   return {
     name: 'vite:doc', // 插件名，用于调试和错误报告
-    apply: 'serve', // 指定应用时机，'serve' 表示只在开发服务器中应用
+    apply: 'build', // 指定应用时机，'serve' 表示只在开发服务器中应用
     enforce: 'pre',
     load(id) {
       
@@ -21,12 +21,13 @@ export function createMyVitePlugin(): Plugin {
         console.log(`First directory -> Starting build`);
         
         try {
-          console.log('id: ', id);
+          // console.log('id: ', id);
           let arr = id.replace(process.cwd(), '').replace('/src/', '').replace(/\.vue/g, '').toLowerCase().split('/').join('-')
         // console.log('--------------------------------', id.replace(process.cwd(), ''), process.cwd() + `/docs/${arr}.md`)
           process.nextTick(() => {
             // const ls = cp.spawn('npm', ['run', 'dev']);
             const ls = cp.spawn('docvue', [id , process.cwd() + `/docs/${arr}.md`]);
+            console.info('--------------------------------', `/docs/${arr}.md`)
             // ls.stdout.on('data', (data) => {
             //   console.info(`${data}`);
             // });

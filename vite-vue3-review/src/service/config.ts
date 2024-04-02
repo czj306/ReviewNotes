@@ -2,13 +2,14 @@
  * @Author: xx1czj 306205161@qq.com
  * @Date: 2024-03-26 14:10:09
  * @LastEditors: xx1czj 306205161@qq.com
- * @LastEditTime: 2024-04-02 11:27:11
+ * @LastEditTime: 2024-04-02 11:57:40
  * @FilePath: /ReviewNotes/vite-vue3-review/src/service/config.ts
  * @Description: service 基础配置中心
  */
 import axios, { AxiosError, AxiosResponse, AxiosInstance } from 'axios'
 import Cache from './cache2'
 import { httpErrorStatusHandle } from './errorCode.ts'
+import qs from "qs";
 import { pendingMap, setPendingMap, getRequestKey } from './cancel.ts'
 
 const CancelToken = axios.CancelToken;
@@ -102,6 +103,11 @@ const callApi = (method = "GET", url: string, data = {
     url,
     params: method === "GET" ? data : {},
     data: method === "POST" ? data : {},
+	transformRequest: [
+		(data) => {
+			return qs.stringify(data)
+		}
+	]
   });
 };
 

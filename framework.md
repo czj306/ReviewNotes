@@ -2,7 +2,7 @@
  * @Author: xx1czj 306205161@qq.com
  * @Date: 2024-03-25 10:07:17
  * @LastEditors: xx1czj 306205161@qq.com
- * @LastEditTime: 2024-03-26 11:27:10
+ * @LastEditTime: 2024-04-02 11:53:13
  * @FilePath: /ReviewNotes/framework.md
  * @Description: 用于复习，并说明项目流程及结构
 -->
@@ -32,3 +32,15 @@
 
 #### 项目整合
 > 
+``` bash
+├── [...all].vue # 捕获所有路由，常用于404
+├── about
+│   └── index.vue
+├── about.vue # 通过/about来访问该页面
+├── blog  # 通过/blog来访问
+│   ├── [id].vue # 动态路由
+│   ├── index.vue
+│   └── today
+├── components.vue
+└── index.vue # 当访问本地IP和端口号时的默认页面
+```

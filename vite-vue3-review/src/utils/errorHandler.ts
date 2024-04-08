@@ -2,7 +2,7 @@
  * @Author: xx1czj 306205161@qq.com
  * @Date: 2024-04-02 13:26:08
  * @LastEditors: xx1czj 306205161@qq.com
- * @LastEditTime: 2024-04-02 14:08:25
+ * @LastEditTime: 2024-04-03 14:24:30
  * @FilePath: /ReviewNotes/vite-vue3-review/src/utils/errorHandler.ts
  * @Description: 封装 error 监听方法
  */
@@ -20,7 +20,13 @@ export default {
       });
     });
   },
-  
+  /**
+  * @param {String}  message    错误信息
+  * @param {String}  source    出错文件
+  * @param {Number}  lineno    行号
+  * @param {Number}  colno    列号
+  * @param {Object}  error  Error对象
+  */
   async onerror(message: any, source: any, lineno: any, colno: any, error: any) {
     await CommonApi.postErrorLogs({
       errorType: 2, // 错误类型: 1接口报错 2代码报错

@@ -43,9 +43,7 @@ export default class main{
 		window.requestAnimationFrame(
 	      this.loop.bind(this),
 	      canvas
-	    )
-	    
-				
+	    )		
 	}
 
 	run(){			

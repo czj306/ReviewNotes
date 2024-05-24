@@ -2,7 +2,7 @@
  * @Author: xx1czj 306205161@qq.com
  * @Date: 2024-03-26 13:57:17
  * @LastEditors: xx1czj 306205161@qq.com
- * @LastEditTime: 2024-04-03 12:09:52
+ * @LastEditTime: 2024-04-11 10:02:06
  * @FilePath: /ReviewNotes/vite-vue3-review/src/main.ts
  * @Description:
  */
@@ -19,6 +19,7 @@ import recordscreen from "@websee/recordscreen";
 import App from "./App.vue";
 import Worker from "utils/worker.ts?worker";
 
+
 // 当应用发现有更新时，应用会自动安装新的Service Worker，更新缓存并刷新页面。
 registerSW({ immediate: true });
 
@@ -34,6 +35,8 @@ const router = createRouter({
 import "./style.css";
 app.use(router);
 app.use(pinia);
+
+
 const isProd = process.env.NODE_ENV === 'production';
 if (isProd) {
   // 实现多线程方式 worker

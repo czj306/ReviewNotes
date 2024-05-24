@@ -2,7 +2,7 @@
  * @Author: xx1czj 306205161@qq.com
  * @Date: 2024-03-28 00:55:07
  * @LastEditors: xx1czj 306205161@qq.com
- * @LastEditTime: 2024-04-02 11:44:48
+ * @LastEditTime: 2024-04-10 14:41:21
  * @FilePath: /ReviewNotes/vite-vue3-review/src/vite-env.d.ts
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -16,6 +16,7 @@ declare module 'vite-plugin-vue-devtools';
 declare module 'plugins';
 declare module '*.ts';
 declare module 'qs';
+declare module 'vue3-datav';
 
 declare module '*.vue' {
   import type { ComponentOptions } from 'vue'
